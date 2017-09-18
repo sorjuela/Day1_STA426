@@ -1,0 +1,26 @@
+---
+title: "Exercise 1 -- Part 2"
+author: "Stephany"
+date: "September 18, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###Part 2 
+Create an HTML/PDF document that samples 100 values from a log-normal distribution (say, mu=1, sigma=.25)
+
+```{r sample}
+x = rlnorm(1000, meanlog=1, sdlog=.25)
+```
+
+
+Create a histogram of the distribution and the distribution on the log scale; report the mean and variance of the sample in line in the text.
+
+```{r histogram}
+hist(x,200)
+hist(log(x),200)
+```
+
